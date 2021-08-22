@@ -1,0 +1,90 @@
+---
+title: "My RMarkdown"
+author: "Ricardo Segovia"
+date: "8/21/2021"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+lang: es-ES
+---
+
+# Título Primer Nivel
+
+## Título Segundo Nivel
+
+### Título Tercer Nivel
+
+*TExto Cursiva*
+
+**Texto Negrita**
+
+***Texto negrita y cursiva***
+
+Crear un enlace
+[Esto es lo que se vera](https://ricardosegovia.com)
+
+Insertar una imagen
+![Pie de foto](imagen.png)
+
+Como colocar una fórmula Dos simbolos Dolar.
+
+La ecuación es:$e=mc^2$
+
+Insertar código y resultado
+```{r}
+a <- 1+2
+a
+```
+
+Tambien dar clic en el boton de menu superior
+
+![Foto menu](codigo.png)
+
+```{r}
+b<- 2+3
+b
+```
+
+Solo deseas resultado pero no el código 
+
+![r echo=false](rechoFalse.png)
+
+
+```{r echo=FALSE}
+c<- 4+5+6
+c
+```
+
+Por el contrario queremos el código pero no resultado
+```{r eval=FALSE}
+d<- 10*23
+```
+
+Eliniar los "warnings"
+
+![r warning](rwarning.png)
+
+```{r warning=FALSE}
+
+```
+
+Sin mensaje (como cuando cargamos una librería)
+
+```{r message=FALSE}
+library(sqldf)
+```
+
+
+Expresar cuando existen errores (ejemplo esta mal escrito el código o una variable)
+
+```{r error=TRUE}
+library(ggplot2)
+data(iris)
+ggplot(iris, aes(Sepal.Width, Sepal.Leght)) + geom_point()
+```
+
+En el siguiente menu convertir a PDF o Word
+
+![A word o PDF](knitWP.png)
+
